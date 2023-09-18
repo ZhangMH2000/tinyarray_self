@@ -202,6 +202,7 @@ draw_heatmap <-  function(n,
                                   rect_gp = grid::gpar(col = "grey", lwd = 1),
                                   show_column_names = FALSE,
                                   show_row_names = show_rownames)
+                                  column_names_gp = gpar(fontsize = 10, rot = 45)
     }else{
       p = ComplexHeatmap::Heatmap(n,name = " ",
                                   col = col_fun,
@@ -213,6 +214,7 @@ draw_heatmap <-  function(n,
                                   show_column_names = FALSE,
                                   show_row_names = show_rownames ,
                                   column_title = NULL)
+                                  column_names_gp = gpar(fontsize = 10, rot = 45)
     }
   }else{
     annotation_col=data.frame(group=group_list)
